@@ -1,0 +1,6 @@
+.env
+.node_modules
+
+
+
+# .gitignore es una herramienta útil en Git que se utiliza para especificar qué archivos o directorios deben ser ignorados por Git. Esto significa que Git no los rastreará ni los incluirá en los commits.

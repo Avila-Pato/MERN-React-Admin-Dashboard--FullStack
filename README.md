@@ -1,6 +1,5 @@
 # Panel de Administración MERN Stack
 
-Este proyecto es un panel de administración construido con la pila MERN (MongoDB, Express.js, React, Node.js). Utiliza una serie de herramientas y tecnologías para crear una interfaz de usuario eficiente y un backend robusto.
 
 ## Tecnologías Utilizadas
 

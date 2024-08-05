@@ -10,8 +10,14 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
-// Configuracion
 
+// importando datos para inyectar en la base de datos
+
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
+
+
+// Configuracion
 dotenv.config();
 const app = express();
 app.use(helmet());
@@ -37,6 +43,10 @@ mongoose
     app.listen(PORT, () =>
       console.log(`El servidor está corriendo en el puerto ${PORT}`)
     );
+
+    // Inyectar datos en la base de datos
+
+    User.insertMany(dataUser);
   })
   .catch((error) =>
     console.log(`${error} Fallo al conectar al puerto ${PORT}`)

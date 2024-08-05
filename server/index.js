@@ -44,9 +44,9 @@ mongoose
       console.log(`El servidor está corriendo en el puerto ${PORT}`)
     );
 
-    // Inyectar datos en la base de datos
+    // Inyectar datos en la base de datos solo una vez
 
-    User.insertMany(dataUser);
+    // User.insertMany(dataUser);
   })
   .catch((error) =>
     console.log(`${error} Fallo al conectar al puerto ${PORT}`)

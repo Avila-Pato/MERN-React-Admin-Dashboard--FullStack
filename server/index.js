@@ -14,7 +14,9 @@ import salesRoutes from "./routes/sales.js";
 // importando datos para inyectar en la base de datos
 
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataUser, dataProduct, dataProductStat } from "./data/index.js";
 
 
 // Configuracion
@@ -45,7 +47,9 @@ mongoose
     );
 
     // Inyectar datos en la base de datos solo una vez
-
+    
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
     // User.insertMany(dataUser);
   })
   .catch((error) =>

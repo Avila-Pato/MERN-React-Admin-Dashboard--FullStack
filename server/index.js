@@ -16,7 +16,8 @@ import salesRoutes from "./routes/sales.js";
 import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
-import { dataUser, dataProduct, dataProductStat } from "./data/index.js";
+import Transaction from "./models/Transaction.js";
+import { dataUser, dataProduct, dataProductStat, dataTransaction } from "./data/index.js";
 
 
 // Configuracion
@@ -46,10 +47,12 @@ mongoose
       console.log(`El servidor está corriendo en el puerto ${PORT}`)
     );
 
-    // Inyectar datos en la base de datos solo una vez
+    // Inyectar datos en la base de datos  mongoose solo una vez.
     
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
+  
     // User.insertMany(dataUser);
   })
   .catch((error) =>

@@ -9,6 +9,7 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
+import OverallStat from "./models/OverallStat.js";
 
 
 // importando datos para inyectar en la base de datos
@@ -17,7 +18,12 @@ import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from "./data/index.js";
+import { dataUser, 
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+  dataOverallStat,
+ } from "./data/index.js";
 
 
 // Configuracion
@@ -48,9 +54,10 @@ mongoose
     );
 
     // Inyectar datos en la base de datos  mongoose solo una vez.
-    
+
+     // OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);
-    // ProductStat.insertMany(dataProductStat);
+    //  ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
   
     // User.insertMany(dataUser);
